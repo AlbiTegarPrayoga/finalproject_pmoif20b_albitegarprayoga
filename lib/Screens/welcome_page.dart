@@ -1,4 +1,4 @@
-// import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/login_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/login_page.dart';
 // import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/register_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:flutter/material.dart';
@@ -61,8 +61,9 @@ class WelcomePage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.indigoAccent[700],
                     onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => RegisterPage(),),);},
+                      // Navigator.push(
+                      //   context, MaterialPageRoute(builder: (context) => RegisterPage(),),);
+                      },
                     child: Text(
                       "Register",
                       style: TextStyle(
