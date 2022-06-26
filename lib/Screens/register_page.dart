@@ -1,7 +1,6 @@
 // import 'package:cobabg/Api/api.dart';
-// import 'package:cobabg/Screens/login_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/login_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
-import 'package:cobabg/main.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
