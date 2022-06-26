@@ -27,7 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
       'alamat': controlleralamat.text,
       'password': controllerpassword.text,
     };
-    // bool res = await CallApi().postData(data, 'users', context);
+    bool res = await CallApi().postData(data, 'users', context);
     Navigator.pop(context);
   }
   bool passwordVisible = false;
