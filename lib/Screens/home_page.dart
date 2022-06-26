@@ -1,9 +1,6 @@
 import 'dart:ui';
 
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
-// import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
-// import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
-// import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class HomePage extends StatefulWidget {
   final String username;
   HomePage({required this.username});
-
-
 
   @override
   _HomePageState createState() => _HomePageState();
