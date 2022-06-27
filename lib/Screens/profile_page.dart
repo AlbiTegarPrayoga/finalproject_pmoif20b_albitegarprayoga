@@ -28,7 +28,24 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 115),
+            SizedBox(height: 30),
+            Row(
+              children: [
+                SizedBox(width: 15),
+                IconButton(
+                  iconSize: 40,
+                  icon: Icon(
+                    Icons.home_rounded,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => HomePage(username: '',),),);
+                  },
+                ),
+              ],
+            ),
+            SizedBox(height: 25),
             Text(
               "My Profile",
               textAlign: TextAlign.center,
@@ -160,7 +177,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   borderRadius: BorderRadius.circular(7)
               ),
             ),
-            SizedBox(height: 85),
+            SizedBox(height: 95),
             Container(
               alignment: Alignment(-0.9, -0.1),
               child: GestureDetector(

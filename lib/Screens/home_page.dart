@@ -37,172 +37,161 @@ class _HomePageState extends State<HomePage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Background(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Welcome",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                SizedBox(width: 290),
+                IconButton(
+                  iconSize: 40,
+                  icon: Icon(
+                    Icons.account_circle,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
+                  },
                 ),
-              ),
-              Text(
-                "and get ready to",
-                textAlign: TextAlign.center,
-                style: TextStyle(
+              ],
+            ),
+            SizedBox(height: 20),
+            Text(
+              "Welcome",
+              textAlign: TextAlign.center,
+              style: TextStyle(
                   fontSize: 30,
-                ),
+                  fontWeight: FontWeight.bold
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Go ",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  Text(
-                    "Green",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+            ),
+            Text(
+              "and get ready to",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Go ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
                       fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  border: Border.all(color: Colors.indigoAccent.shade700),
-                ),
-                height: size.height * 0.15,
-                width: size.width * 0.7,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => BuahPage(),),);
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Buah",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
-                        ),
-                        SizedBox(width: 50),
-                        Image.asset('assets/images/buah.jpg')
-                      ],
-                    ),
+                      fontWeight: FontWeight.bold
                   ),
                 ),
-              ),
-              SizedBox(height: 5),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.indigoAccent.shade700)
+                Text(
+                  "Green",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
                 ),
-                height: size.height * 0.15,
-                width: size.width * 0.7,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => SayurPage(),),);
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Sayur",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
-                          textAlign: TextAlign.left,
-                        ),
-                        SizedBox(width: 20),
-                        Image.asset('assets/images/sayur.jpg')
-                      ],
-                    ),
+              ],
+            ),
+            SizedBox(height: 30),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                border: Border.all(color: Colors.indigoAccent.shade700),
+              ),
+              height: size.height * 0.15,
+              width: size.width * 0.7,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: FlatButton(
+                  padding: EdgeInsets.symmetric(
+                      vertical: 10, horizontal: 10),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Buah",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
+                      ),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/buah.jpg')
+                    ],
                   ),
                 ),
               ),
-              SizedBox(height: 5),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.indigoAccent.shade700)
-                ),
-                height: size.height * 0.055,
-                width: size.width * 0.7,
-                child: ClipRRect(
+            ),
+            SizedBox(height: 5),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
-                    },
-                    child: Text(
-                      "Tanaman Lain",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
-                    ),
+                  border: Border.all(color: Colors.indigoAccent.shade700)
+              ),
+              height: size.height * 0.15,
+              width: size.width * 0.7,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: FlatButton(
+                  padding: EdgeInsets.symmetric(
+                      vertical: 10, horizontal: 10),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => SayurPage(),),);
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Sayur",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(width: 20),
+                      Image.asset('assets/images/sayur.jpg')
+                    ],
                   ),
                 ),
               ),
-              SizedBox(height: 5),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.indigoAccent.shade700)
-                ),
-                height: size.height * 0.055,
-                width: size.width * 0.7,
-                child: ClipRRect(
+            ),
+            SizedBox(height: 5),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
-                    },
-                    child: Text(
-                      "TestProfile",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
-                    ),
+                  border: Border.all(color: Colors.indigoAccent.shade700)
+              ),
+              height: size.height * 0.055,
+              width: size.width * 0.7,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: FlatButton(
+                  padding: EdgeInsets.symmetric(
+                      vertical: 10, horizontal: 10),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
+                  },
+                  child: Text(
+                    "Tanaman Lain",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+            SizedBox(height: 75),
+          ],
         ),
       ),
     );

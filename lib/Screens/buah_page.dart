@@ -1,5 +1,7 @@
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/pilihbuah_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -9,15 +11,58 @@ class BuahPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.black, size: 35,
-        ),
-        elevation: 5.0,
-        centerTitle: true,
-        title: Text(
-            "Buah", style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold)
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => HomePage(username: '',),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(width: 25),
+            Container(
+              width: size.width * 0.46,
+              alignment: Alignment.center,
+              child: Text(
+                  "Buah", style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold)
+              ),
+            ),
+            SizedBox(width: 25),
+            Row(
+              children: [
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.account_circle,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
         backgroundColor: kPrimaryColor,
       ),

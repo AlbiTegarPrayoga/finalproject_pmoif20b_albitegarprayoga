@@ -40,7 +40,7 @@ class PilihbuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    child: Image.asset('assets/images/buah/rambutan.jpg'),
+                    // child: Image.asset(''),
                   ),
                 ),
               ),
