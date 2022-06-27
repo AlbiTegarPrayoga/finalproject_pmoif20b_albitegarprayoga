@@ -1,6 +1,10 @@
 import 'dart:ui';
 
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -90,8 +94,8 @@ class _HomePageState extends State<HomePage> {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => BuahPage(),),);
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -124,8 +128,8 @@ class _HomePageState extends State<HomePage> {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context) => SayurPage(),),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => SayurPage(),),);
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -159,11 +163,38 @@ class _HomePageState extends State<HomePage> {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
                     },
                     child: Text(
                       "Tanaman Lain",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 5),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    border: Border.all(color: Colors.indigoAccent.shade700)
+                ),
+                height: size.height * 0.055,
+                width: size.width * 0.7,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(7),
+                  child: FlatButton(
+                    padding: EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 10),
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
+                    },
+                    child: Text(
+                      "TestProfile",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
