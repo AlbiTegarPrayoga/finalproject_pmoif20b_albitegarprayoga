@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
-// import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/register_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -207,7 +207,8 @@ class _LoginPageState extends State<LoginPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+                  Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => RegisterPage()));
                 },
                 child: Text(
                   "Register",
