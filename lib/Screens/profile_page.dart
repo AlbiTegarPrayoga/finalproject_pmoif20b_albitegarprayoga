@@ -1,33 +1,15 @@
-import 'package:finalproject_pmoif20b_albitegarprayoga/Api/api.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/login_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({ Key? key }) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({ Key? key }) : super(key: key);
 
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
-  TextEditingController controllerusername = TextEditingController();
-  TextEditingController controlleremail = TextEditingController();
-  TextEditingController controlleralamat = TextEditingController();
-  TextEditingController controllerpassword = TextEditingController();
-
-  get onPressed => _simpan();
-
-  _simpan() async {
-    var data = {
-      'username': controllerusername.text,
-      'email': controlleremail.text,
-      'alamat': controlleralamat.text,
-      'password': controllerpassword.text,
-    };
-    bool res = await CallApi().postData(data, 'users', context);
-    Navigator.pop(context);
-  }
+class _ProfilePageState extends State<ProfilePage> {
 
   bool passwordVisible = false;
   void togglePassword() {
@@ -46,7 +28,7 @@ class _RegisterPageState extends State<RegisterPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Register",
+                "My Profile",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 30,
@@ -70,7 +52,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
-                  controller: controllerusername,
                   decoration: InputDecoration(
                     hintText: "Username",
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
@@ -99,7 +80,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
-                  controller: controlleremail,
                   decoration: InputDecoration(
                     hintText: "@gmail.com",
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
@@ -128,7 +108,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
-                  controller: controlleralamat,
                   decoration: InputDecoration(
                     hintText: "Alamat",
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
@@ -157,7 +136,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
-                  controller: controllerpassword,
                   obscureText: !passwordVisible,
                   decoration: InputDecoration(
                     hintText: "Password",
@@ -181,34 +159,14 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               SizedBox(height: 30),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                height: size.height * 0.055,
-                width: size.width * 0.7,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                    color: Colors.indigoAccent[700],
-                    onPressed: () {
-                      _simpan();
-                    },
-                    child: Text(
-                      "Register",
-                      style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 15),
               Text(
                 "Sudah punya akun?",
                 style: TextStyle(color: Colors.grey),
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => LoginPage(),),);
+                  // Navigator.push(
+                  //   context, MaterialPageRoute(builder: (context) => LoginPage(),),);
                 },
                 child: Text(
                   "Login",
