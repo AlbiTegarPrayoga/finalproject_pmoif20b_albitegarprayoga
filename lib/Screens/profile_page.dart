@@ -137,6 +137,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
+
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
