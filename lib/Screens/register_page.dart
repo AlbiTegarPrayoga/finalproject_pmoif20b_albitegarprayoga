@@ -67,6 +67,18 @@ class _RegisterPageState extends State<RegisterPage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
@@ -76,10 +88,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                     border: InputBorder.none,
                   ),
-                ),
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
                 ),
               ),
               SizedBox(height: 20),
@@ -96,6 +104,18 @@ class _RegisterPageState extends State<RegisterPage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
@@ -105,10 +125,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                     border: InputBorder.none,
                   ),
-                ),
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
                 ),
               ),
               SizedBox(height: 20),
@@ -125,6 +141,18 @@ class _RegisterPageState extends State<RegisterPage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
@@ -134,10 +162,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                     border: InputBorder.none,
                   ),
-                ),
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
                 ),
               ),
               SizedBox(height: 20),
@@ -154,6 +178,18 @@ class _RegisterPageState extends State<RegisterPage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
                 padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: TextField(
@@ -175,14 +211,22 @@ class _RegisterPageState extends State<RegisterPage> {
                     border: InputBorder.none,
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
-                ),
               ),
               SizedBox(height: 30),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: ClipRRect(
@@ -203,7 +247,8 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: 15),
               Text(
                 "Sudah punya akun?",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Colors.grey,
+                ),
               ),
               GestureDetector(
                 onTap: () {

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/home_admin_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/register_page.dart';
@@ -8,12 +9,12 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
-class LoginPage extends StatefulWidget {
+class LoginAdminPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginAdminPageState createState() => _LoginAdminPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginAdminPageState extends State<LoginAdminPage> {
   bool passwordVisible = false;
   late SharedPreferences logindata;
   late bool newuser;
@@ -80,33 +81,19 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Sign in to",
+                "Sign in",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Go ",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  Text(
-                    "Green",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ],
+              Text(
+                "Admin",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold
+                ),
               ),
               SizedBox(height: 40),
               Container(
@@ -217,7 +204,9 @@ class _LoginPageState extends State<LoginPage> {
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                     color: Colors.indigoAccent[700],
                     onPressed: () {
-                      _login();
+                      // _login();
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => HomeAdminPage(username: '',),),);
                     },
                     child: Text(
                       "Masuk",
@@ -226,21 +215,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
-              Text(
-                "Belum punya akun?",
-                style: TextStyle(color: Colors.grey),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
-                },
-                child: Text(
-                  "Register",
-                  style: TextStyle(
-                      color: Colors.indigoAccent[700], fontWeight: FontWeight.bold),
-                ),
-              )
             ],
           ),
         ),
