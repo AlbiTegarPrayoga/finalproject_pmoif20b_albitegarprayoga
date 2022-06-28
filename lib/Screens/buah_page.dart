@@ -18,6 +18,7 @@ class BuahPage extends StatelessWidget {
             Row(
               children: [
                 Align(
+                  alignment: Alignment.centerRight,
                   child: IconButton(
                     iconSize: 40,
                     icon: Icon(
@@ -46,6 +47,7 @@ class BuahPage extends StatelessWidget {
             Row(
               children: [
                 Align(
+                  alignment: Alignment.centerRight,
                   child: IconButton(
                     iconSize: 40,
                     icon: Icon(
@@ -101,7 +103,7 @@ class BuahPage extends StatelessWidget {
                 margin: EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.indigoAccent.shade700),
+                    border: Border.all(color: Colors.indigoAccent.shade700)
                 ),
                 height: size.height * 0.15,
                 width: size.width * 0.7,

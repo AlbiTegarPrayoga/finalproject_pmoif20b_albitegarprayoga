@@ -41,6 +41,7 @@ class CallApi {
       print(e.toString());
     }
   }
+
   Future delData(data, apiUrl, BuildContext context) async {
     try {
       http.Response hasilRespons = await http.delete(

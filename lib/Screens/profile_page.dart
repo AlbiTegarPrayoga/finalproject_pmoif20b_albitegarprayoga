@@ -1,6 +1,5 @@
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page_kontributor.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -137,7 +136,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
@@ -216,7 +214,7 @@ class _ProfilePageState extends State<ProfilePage> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: ''),),);
+                    context, MaterialPageRoute(builder: (context) => HomePage(username: '',),),);
                 },
                 child: Text(
                   "Beralih\nSebagai Kontributor",
