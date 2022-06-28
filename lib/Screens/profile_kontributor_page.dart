@@ -1,18 +1,17 @@
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page_kontributor.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({ Key? key }) : super(key: key);
+class ProfileKontributorPage extends StatefulWidget {
+  const ProfileKontributorPage({ Key? key }) : super(key: key);
 
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  _ProfileKontributorPageState createState() => _ProfileKontributorPageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfileKontributorPageState extends State<ProfileKontributorPage> {
 
   bool passwordVisible = false;
   void togglePassword() {
@@ -48,7 +47,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             SizedBox(height: 25),
             Text(
-              "My Profile",
+              "Profile Kontributor",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 30,
@@ -184,10 +183,10 @@ class _ProfilePageState extends State<ProfilePage> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: ''),),);
+                    context, MaterialPageRoute(builder: (context) => HomePage(username: ''),),);
                 },
                 child: Text(
-                  "Beralih\nSebagai Kontributor",
+                  "Beralih\nSebagai Pembaca",
                   style: TextStyle(
                       color: Colors.indigoAccent[700], fontWeight: FontWeight.bold),
                 ),
