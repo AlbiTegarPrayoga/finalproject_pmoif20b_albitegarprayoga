@@ -26,12 +26,11 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       body: Background(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: 30),
             Row(
               children: [
-                SizedBox(width: 15),
+                SizedBox(width: 10),
                 IconButton(
                   iconSize: 40,
                   icon: Icon(
@@ -54,7 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   fontWeight: FontWeight.bold
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             Container(
               height: size.height * 0.02,
               width: size.width * 0.7,
@@ -68,6 +67,18 @@ class _ProfilePageState extends State<ProfilePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[50],
+                borderRadius: BorderRadius.circular(7),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2.5,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+              ),
               height: size.height * 0.055,
               width: size.width * 0.7,
               child: TextField(
@@ -76,10 +87,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                   border: InputBorder.none,
                 ),
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.blueGrey[50],
-                  borderRadius: BorderRadius.circular(7)
               ),
             ),
             SizedBox(height: 20),
@@ -96,6 +103,18 @@ class _ProfilePageState extends State<ProfilePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[50],
+                borderRadius: BorderRadius.circular(7),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2.5,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+              ),
               height: size.height * 0.055,
               width: size.width * 0.7,
               child: TextField(
@@ -104,10 +123,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                   border: InputBorder.none,
                 ),
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.blueGrey[50],
-                  borderRadius: BorderRadius.circular(7)
               ),
             ),
             SizedBox(height: 20),
@@ -124,6 +139,18 @@ class _ProfilePageState extends State<ProfilePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[50],
+                borderRadius: BorderRadius.circular(7),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2.5,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+              ),
               height: size.height * 0.055,
               width: size.width * 0.7,
               child: TextField(
@@ -132,10 +159,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   hintStyle: TextStyle(color: Colors.blueGrey[100],fontStyle: FontStyle.italic),
                   border: InputBorder.none,
                 ),
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.blueGrey[50],
-                  borderRadius: BorderRadius.circular(7)
               ),
             ),
             SizedBox(height: 20),
@@ -152,6 +175,18 @@ class _ProfilePageState extends State<ProfilePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[50],
+                borderRadius: BorderRadius.circular(7),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2.5,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+              ),
               height: size.height * 0.055,
               width: size.width * 0.7,
               child: TextField(
@@ -172,12 +207,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   border: InputBorder.none,
                 ),
               ),
-              decoration: BoxDecoration(
-                  color: Colors.blueGrey[50],
-                  borderRadius: BorderRadius.circular(7)
-              ),
             ),
-            SizedBox(height: 95),
+            SizedBox(height: 125),
             Container(
               alignment: Alignment(-0.9, -0.1),
               child: GestureDetector(

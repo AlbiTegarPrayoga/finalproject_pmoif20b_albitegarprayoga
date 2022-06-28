@@ -38,11 +38,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Background(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: 30),
             Row(
               children: [
-                SizedBox(width: 290),
+                SizedBox(width: 300),
                 IconButton(
                   iconSize: 40,
                   icon: Icon(
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 25),
             Text(
               "Welcome",
               textAlign: TextAlign.center,
@@ -100,6 +100,14 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
                 border: Border.all(color: Colors.indigoAccent.shade700),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1.5,
+                    blurRadius: 3,
+                    offset: Offset(0, 0),
+                  ),
+                ],
               ),
               height: size.height * 0.15,
               width: size.width * 0.7,
@@ -107,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(7),
                 child: FlatButton(
                   padding: EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 10),
+                      vertical: 5, horizontal: 5),
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
@@ -132,8 +140,16 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  border: Border.all(color: Colors.indigoAccent.shade700)
+                borderRadius: BorderRadius.circular(7),
+                border: Border.all(color: Colors.indigoAccent.shade700),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1.5,
+                    blurRadius: 3,
+                    offset: Offset(0, 0),
+                  ),
+                ],
               ),
               height: size.height * 0.15,
               width: size.width * 0.7,
@@ -141,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(7),
                 child: FlatButton(
                   padding: EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 10),
+                      vertical: 5, horizontal: 5),
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
@@ -167,8 +183,16 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  border: Border.all(color: Colors.indigoAccent.shade700)
+                borderRadius: BorderRadius.circular(7),
+                border: Border.all(color: Colors.indigoAccent.shade700),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1.5,
+                    blurRadius: 3,
+                    offset: Offset(0, 0),
+                  ),
+                ],
               ),
               height: size.height * 0.055,
               width: size.width * 0.7,
@@ -176,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(7),
                 child: FlatButton(
                   padding: EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 10),
+                      vertical: 5, horizontal: 5),
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
@@ -190,7 +214,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 75),
           ],
         ),
       ),
