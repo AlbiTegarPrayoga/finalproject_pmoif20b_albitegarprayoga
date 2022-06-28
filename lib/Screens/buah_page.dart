@@ -114,10 +114,8 @@ class BuahPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
                     },
                     child: Text(
                       "Mangga",
