@@ -40,7 +40,7 @@ class ManfaatPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     child: Text(
-                      "",
+                      "ssss",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),

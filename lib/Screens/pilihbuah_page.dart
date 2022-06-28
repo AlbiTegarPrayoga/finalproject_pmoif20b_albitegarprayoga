@@ -16,7 +16,7 @@ class PilihbuahPage extends StatelessWidget {
         elevation: 5.0,
         centerTitle: true,
         title: Text(
-            "Rambutan", style: TextStyle(
+            "Buahhhh", style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold)
         ),
