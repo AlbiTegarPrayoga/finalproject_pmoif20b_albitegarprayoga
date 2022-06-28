@@ -1,11 +1,11 @@
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/pilihbuah_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/pilihsayur_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
-class BuahPage extends StatelessWidget {
+class Sayurpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -88,10 +88,10 @@ class BuahPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihBuahPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihSayurPage(),),);
                     },
                     child: Text(
-                      "Rambutan",
+                      "Sawi",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
@@ -115,10 +115,10 @@ class BuahPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihBuahPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihSayurPage(),),);
                     },
                     child: Text(
-                      "Mangga",
+                      "Wortel",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
@@ -147,7 +147,7 @@ class BuahPage extends StatelessWidget {
                       //     onChanged: (String value) {  },);},),);
                     },
                     child: Text(
-                      "Jeruk",
+                      "Selada",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
@@ -175,7 +175,7 @@ class BuahPage extends StatelessWidget {
                       //   return BuahPage();},),);
                     },
                     child: Text(
-                      "Salak",
+                      "Cabai",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
@@ -204,7 +204,7 @@ class BuahPage extends StatelessWidget {
                       //     onChanged: (String value) {  },);},),);
                     },
                     child: Text(
-                      "Pisang",
+                      "Bayam",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
