@@ -12,7 +12,7 @@ class CallApi {
       print(hasilRespons.body);
       if (hasilRespons.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Simpan data berhasil")));
+            const SnackBar(content: Text("Simpan data berhasil")))
         return true;
       } else {
         return false;
