@@ -140,7 +140,10 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
+                    },
                     child: Text(
                       "Jeruk",
                       style: TextStyle(
@@ -164,7 +167,10 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
+                    },
                     child: Text(
                       "Salak",
                       style: TextStyle(
@@ -188,7 +194,10 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
+                    },
                     child: Text(
                       "Pisang",
                       style: TextStyle(
@@ -212,7 +221,10 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
+                    },
                     child: Text(
                       "Pepaya",
                       style: TextStyle(

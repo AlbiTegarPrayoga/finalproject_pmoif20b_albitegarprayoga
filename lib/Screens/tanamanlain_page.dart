@@ -1,8 +1,10 @@
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/pilihtanamanlain_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
+
 
 class TanamanlainPage extends StatelessWidget {
   @override
@@ -86,9 +88,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return BuahPage();},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Lidah Buaya",
@@ -114,10 +115,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Aglonema",
@@ -143,10 +142,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Sereh",
@@ -172,9 +169,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return BuahPage();},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Kaktus",
@@ -200,10 +196,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Mawar",
@@ -229,10 +223,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Tempuyung",
@@ -258,10 +250,8 @@ class TanamanlainPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihtanamanlainPage(),),);
                     },
                     child: Text(
                       "Bambu",

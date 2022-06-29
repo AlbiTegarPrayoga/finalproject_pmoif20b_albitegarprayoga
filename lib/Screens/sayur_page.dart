@@ -5,6 +5,7 @@ import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
+
 class SayurPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,7 +89,7 @@ class SayurPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihSayurPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihsayurPage(),),);
                     },
                     child: Text(
                       "Sawi",
@@ -115,7 +116,7 @@ class SayurPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihSayurPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihsayurPage(),),);
                     },
                     child: Text(
                       "Wortel",
@@ -141,10 +142,8 @@ class SayurPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihsayurPage(),),);
                     },
                     child: Text(
                       "Selada",
@@ -170,9 +169,8 @@ class SayurPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return BuahPage();},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihsayurPage(),),);
                     },
                     child: Text(
                       "Cabai",
@@ -198,42 +196,11 @@ class SayurPage extends StatelessWidget {
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PilihsayurPage(),),);
                     },
                     child: Text(
                       "Bayam",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 5),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.indigoAccent.shade700)
-                ),
-                height: size.height * 0.15,
-                width: size.width * 0.7,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(7),
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 10),
-                    color: Colors.white,
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
-                    },
-                    child: Text(
-                      "Pepaya",
                       style: TextStyle(
                           fontWeight: FontWeight.w500, color: Colors.indigoAccent.shade700),
                     ),
