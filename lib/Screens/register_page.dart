@@ -10,7 +10,6 @@ class RegisterPage extends StatefulWidget {
   _RegisterPageState createState() => _RegisterPageState();
 }
 
-
 class _RegisterPageState extends State<RegisterPage> {
   TextEditingController controllerusername = TextEditingController();
   TextEditingController controlleremail = TextEditingController();

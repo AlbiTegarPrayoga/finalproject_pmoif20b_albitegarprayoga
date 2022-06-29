@@ -1,3 +1,4 @@
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/home_kontributor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
@@ -40,7 +41,7 @@ class _ProfileKontributorPageState extends State<ProfileKontributorPage> {
                   ),
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => HomePage(username: '',),),);
+                      context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: '',),),);
                   },
                 ),
               ],
