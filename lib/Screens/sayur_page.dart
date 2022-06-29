@@ -38,7 +38,7 @@ class SayurPage extends StatelessWidget {
               width: size.width * 0.46,
               alignment: Alignment.center,
               child: Text(
-                  "Buah", style: TextStyle(
+                  "Sayur", style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold)
               ),
