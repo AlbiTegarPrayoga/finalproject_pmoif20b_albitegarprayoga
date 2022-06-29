@@ -5,7 +5,7 @@ import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
-class Sayurpage extends StatelessWidget {
+class SayurPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

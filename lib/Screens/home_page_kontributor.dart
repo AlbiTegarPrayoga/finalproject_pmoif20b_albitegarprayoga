@@ -4,7 +4,6 @@ import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_kontributor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';

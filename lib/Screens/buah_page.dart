@@ -88,7 +88,7 @@ class BuahPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihBuahPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
                     },
                     child: Text(
                       "Rambutan",
@@ -115,7 +115,7 @@ class BuahPage extends StatelessWidget {
                     color: Colors.white,
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PilihBuahPage(),),);
+                        context, MaterialPageRoute(builder: (context) => PilihbuahPage(),),);
                     },
                     child: Text(
                       "Mangga",
@@ -140,12 +140,7 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Jeruk",
                       style: TextStyle(
@@ -169,11 +164,7 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return BuahPage();},),);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Salak",
                       style: TextStyle(
@@ -197,12 +188,7 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Pisang",
                       style: TextStyle(
@@ -226,12 +212,7 @@ class BuahPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         vertical: 10, horizontal: 10),
                     color: Colors.white,
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context){
-                      //   return RegisterPage(
-                      //     onChanged: (String value) {  },);},),);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Pepaya",
                       style: TextStyle(
