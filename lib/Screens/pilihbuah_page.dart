@@ -4,6 +4,7 @@ import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tutor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
 import 'package:flutter/material.dart';
 
+
 class PilihbuahPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class PilihbuahPage extends StatelessWidget {
         elevation: 5.0,
         centerTitle: true,
         title: Text(
-            "Buahhhh", style: TextStyle(
+            "Buah", style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold)
         ),
