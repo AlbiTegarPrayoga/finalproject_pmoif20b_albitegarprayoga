@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/home_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/tambah_tanamanlain_kontributor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Constant/bantuan.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
@@ -7,14 +9,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 
-class TanamanlainPage extends StatefulWidget {
-  const TanamanlainPage({ Key? key }) : super(key: key);
+class TanamanlainKontributorPage extends StatefulWidget {
+  const TanamanlainKontributorPage({ Key? key }) : super(key: key);
 
   @override
-  _TanamanlainPageState createState() => _TanamanlainPageState();
+  _TanamanlainKontributorPageState createState() => _TanamanlainKontributorPageState();
 }
 
-class _TanamanlainPageState extends State<TanamanlainPage> {
+class _TanamanlainKontributorPageState extends State<TanamanlainKontributorPage> {
   List widgets = [];
 
   @override
@@ -25,17 +27,59 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.black, size: 35,
-        ),
-        elevation: 5.0,
-        centerTitle: true,
-        title: Text(
-            "Tanaman Lain", style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold)
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                Align(
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: '',),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(width: 25),
+            Container(
+              width: size.width * 0.46,
+              alignment: Alignment.center,
+              child: Text(
+                  "Tanaman Lain", style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold)
+              ),
+            ),
+            SizedBox(width: 25),
+            Row(
+              children: [
+                Align(
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.add_circle_rounded,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => TambahTanamanlainKontributorPage(),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
         backgroundColor: kPrimaryColor,
       ),

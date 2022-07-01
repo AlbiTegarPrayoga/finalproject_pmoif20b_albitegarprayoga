@@ -1,10 +1,14 @@
 import 'dart:ui';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/buah_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/homekategori_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/profile_admin_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/welcome_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +46,18 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
             SizedBox(height: 30),
             Row(
               children: [
-                SizedBox(width: 300),
+                IconButton(
+                  iconSize: 40,
+                  icon: Icon(
+                    Icons.logout_rounded,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => WelcomePage(),),);
+                  },
+                ),
+                SizedBox(width: 245),
                 IconButton(
                   iconSize: 40,
                   icon: Icon(
@@ -51,7 +66,7 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
                   ),
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
+                      context, MaterialPageRoute(builder: (context) => ProfileAdminPage(),),);
                   },
                 ),
               ],
@@ -97,10 +112,10 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
                   color: Colors.indigoAccent[700],
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                      context, MaterialPageRoute(builder: (context) => HomeKategoriAdminPage(username: ''),),);
                   },
                   child: Text(
-                    "Review",
+                    "Edit",
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
@@ -135,10 +150,10 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
                   color: Colors.indigoAccent[700],
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                      context, MaterialPageRoute(builder: (context) => ProfileAdminPage(),),);
                   },
                   child: Text(
-                    "Edit",
+                    "Akun",
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 15,

@@ -1,20 +1,23 @@
 import 'dart:convert';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/home_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/tambah_buah_kontributor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Constant/bantuan.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/constants.dart';
+import 'package:need_resume/need_resume.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 
-class TanamanlainPage extends StatefulWidget {
-  const TanamanlainPage({ Key? key }) : super(key: key);
+class BuahKontributorPage extends StatefulWidget {
+  const BuahKontributorPage({ Key? key }) : super(key: key);
 
   @override
-  _TanamanlainPageState createState() => _TanamanlainPageState();
+  _BuahKontributorPageState createState() => _BuahKontributorPageState();
 }
 
-class _TanamanlainPageState extends State<TanamanlainPage> {
+class _BuahKontributorPageState extends ResumableState<BuahKontributorPage> {
   List widgets = [];
 
   @override
@@ -25,17 +28,59 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.black, size: 35,
-        ),
-        elevation: 5.0,
-        centerTitle: true,
-        title: Text(
-            "Tanaman Lain", style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold)
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                Align(
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: '',),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(width: 25),
+            Container(
+              width: size.width * 0.46,
+              alignment: Alignment.center,
+              child: Text(
+                  "Buah", style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold)
+              ),
+            ),
+            SizedBox(width: 25),
+            Row(
+              children: [
+                Align(
+                  child: IconButton(
+                    iconSize: 40,
+                    icon: Icon(
+                      Icons.add_circle_rounded,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => TambahBuahKontributorPage(),),);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
         backgroundColor: kPrimaryColor,
       ),
@@ -57,7 +102,7 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              getnamatanamanlain = widgets[i]["namatanamanlain"],
+              getnamabuah = widgets[i]["namabuah"],
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 35,
@@ -95,7 +140,7 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
             width: size.width * 0.7,
             child: Container(
               child: Text(
-                gettutorialtanamanlain = widgets[i]["tutorialtanamanlain"],
+                gettutorialbuah = widgets[i]["tutorialbuah"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             ),
@@ -130,7 +175,7 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
             width: size.width * 0.7,
             child: Container(
               child: Text(
-                getmanfaattanamanlain = widgets[i]["manfaattanamanlain"],
+                getmanfaatbuah = widgets[i]["manfaatbuah"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             ),
@@ -142,7 +187,7 @@ class _TanamanlainPageState extends State<TanamanlainPage> {
   }
 
   Future<void> loadData() async {
-    var dataURL = Uri.parse(baseURL + 'tanamanlain');
+    var dataURL = Uri.parse(baseURL + 'buah');
     http.Response response = await http.get(dataURL);
     setState(() {
       widgets = jsonDecode(response.body);

@@ -1,26 +1,26 @@
 import 'dart:ui';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/buah_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/home_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/profile_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/sayur_admin_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/tanamanlain_admin_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/profile_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/welcome_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class HomePage extends StatefulWidget {
+class HomeKategoriAdminPage extends StatefulWidget {
   final String username;
-  HomePage({required this.username});
+  HomeKategoriAdminPage({required this.username});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeKategoriAdminPageState createState() => _HomeKategoriAdminPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeKategoriAdminPageState extends State<HomeKategoriAdminPage> {
   late SharedPreferences logindata;
   @override
   void initState() {
@@ -46,12 +46,12 @@ class _HomePageState extends State<HomePage> {
                 IconButton(
                   iconSize: 40,
                   icon: Icon(
-                    Icons.logout_rounded,
+                    Icons.arrow_back_rounded,
                     color: Colors.black,
                   ),
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => WelcomePage(),),);
+                      context, MaterialPageRoute(builder: (context) => HomeAdminPage(username: '',),),);
                   },
                 ),
                 SizedBox(width: 245),
@@ -63,14 +63,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => ProfilePage(),),);
+                      context, MaterialPageRoute(builder: (context) => ProfileAdminPage(),),);
                   },
                 ),
               ],
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 30),
             Text(
-              "Welcome",
+              "Edit",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 30,
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Text(
-              "and get ready to",
+              "and",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
@@ -112,14 +112,6 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
                 border: Border.all(color: Colors.indigoAccent.shade700),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 2,
-                    blurRadius: 2.5,
-                    offset: Offset(0, 0),
-                  ),
-                ],
               ),
               height: size.height * 0.15,
               width: size.width * 0.7,
@@ -131,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                      context, MaterialPageRoute(builder: (context) => BuahAdminPage(),),);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -152,16 +144,8 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                border: Border.all(color: Colors.indigoAccent.shade700),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 2,
-                    blurRadius: 2.5,
-                    offset: Offset(0, 0),
-                  ),
-                ],
+                  borderRadius: BorderRadius.circular(7),
+                  border: Border.all(color: Colors.indigoAccent.shade700)
               ),
               height: size.height * 0.15,
               width: size.width * 0.7,
@@ -173,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => SayurPage(),),);
+                      context, MaterialPageRoute(builder: (context) => SayurAdminPage(),),);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -195,16 +179,8 @@ class _HomePageState extends State<HomePage> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                border: Border.all(color: Colors.indigoAccent.shade700),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 2,
-                    blurRadius: 2.5,
-                    offset: Offset(0, 0),
-                  ),
-                ],
+                  borderRadius: BorderRadius.circular(7),
+                  border: Border.all(color: Colors.indigoAccent.shade700)
               ),
               height: size.height * 0.055,
               width: size.width * 0.7,
@@ -216,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
+                      context, MaterialPageRoute(builder: (context) => TanamanlainAdminPage(),),);
                   },
                   child: Text(
                     "Tanaman Lain",
@@ -226,6 +202,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            SizedBox(height: 75),
           ],
         ),
       ),

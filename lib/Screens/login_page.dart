@@ -183,7 +183,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.blueGrey[100],
                         fontStyle: FontStyle.italic),
                     suffixIcon: IconButton(
-                      iconSize: 20,
+                      iconSize: 22,
                       color: Colors.blueGrey[100],
                       splashRadius: 1,
                       icon: Icon(passwordVisible
@@ -228,9 +228,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(height: 15),
-              Text(
-                "Belum punya akun?",
-                style: TextStyle(color: Colors.grey),
+              Text("Belum punya akun?",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               GestureDetector(
                 onTap: () {
@@ -239,7 +241,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text(
                   "Register",
                   style: TextStyle(
-                      color: Colors.indigoAccent[700], fontWeight: FontWeight.bold),
+                    color: Colors.indigoAccent[700],
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
               )
             ],

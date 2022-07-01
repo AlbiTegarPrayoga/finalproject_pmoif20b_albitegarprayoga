@@ -1,10 +1,11 @@
 import 'dart:ui';
 
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/buah_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/profile_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/sayur_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/tanamanlain_kontributor_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/buah_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/sayur_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/tanamanlain_page.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens//profile_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/welcome_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,11 +39,22 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
     return Scaffold(
       body: Background(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: 30),
             Row(
               children: [
-                SizedBox(width: 290),
+                IconButton(
+                  iconSize: 40,
+                  icon: Icon(
+                    Icons.logout_rounded,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => WelcomePage(),),);
+                  },
+                ),
+                SizedBox(width: 245),
                 IconButton(
                   iconSize: 40,
                   icon: Icon(
@@ -56,9 +68,9 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             Text(
-              "Edit",
+              "Welcome Kontributor,",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 30,
@@ -66,7 +78,7 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
               ),
             ),
             Text(
-              "and get ready to",
+              "get ready to",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
@@ -111,7 +123,7 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => BuahPage(),),);
+                      context, MaterialPageRoute(builder: (context) => BuahKontributorPage(),),);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -145,7 +157,7 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => SayurPage(),),);
+                      context, MaterialPageRoute(builder: (context) => SayurKontributorPage(),),);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -180,7 +192,7 @@ class _HomeKontributorPageState extends State<HomeKontributorPage> {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => TanamanlainPage(),),);
+                      context, MaterialPageRoute(builder: (context) => TanamanlainKontributorPage(),),);
                   },
                   child: Text(
                     "Tanaman Lain",

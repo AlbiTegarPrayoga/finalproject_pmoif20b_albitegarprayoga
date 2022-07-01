@@ -1,21 +1,20 @@
 import 'dart:convert';
 
-import 'package:finalproject_pmoif20b_albitegarprayoga/Kontributor_Screens/home_kontributor_page.dart';
+import 'package:finalproject_pmoif20b_albitegarprayoga/Admin_Screens/home_admin_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/background.dart';
-import 'package:finalproject_pmoif20b_albitegarprayoga/Screens/home_page.dart';
 import 'package:finalproject_pmoif20b_albitegarprayoga/Constant/bantuan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({ Key? key }) : super(key: key);
+class ProfileAdminPage extends StatefulWidget {
+  const ProfileAdminPage({ Key? key }) : super(key: key);
 
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  _ProfileAdminPageState createState() => _ProfileAdminPageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfileAdminPageState extends State<ProfileAdminPage> {
   List widgets = [];
 
   @override
@@ -53,7 +52,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 onPressed: () {
                   Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => HomePage(username: '',),),);
+                    context, MaterialPageRoute(builder: (context) => HomeAdminPage(username: '',),),);
                 },
               ),
             ],
@@ -64,7 +63,7 @@ class _ProfilePageState extends State<ProfilePage> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30,
-                fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 20),
@@ -96,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
             height: size.height * 0.055,
             width: size.width * 0.7,
             child: Container(
-              child: Text(getusername = widgets[i]["username"],
+              child: Text(getusername = widgets[0]["username"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             ),
@@ -130,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
             height: size.height * 0.055,
             width: size.width * 0.7,
             child: Container(
-              child: Text(getemail = widgets[i]["email"],
+              child: Text(getemail = widgets[0]["email"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             ),
@@ -164,7 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
             height: size.height * 0.055,
             width: size.width * 0.7,
             child: Container(
-              child: Text(getalamat = widgets[i]["alamat"],
+              child: Text(getalamat = widgets[0]["alamat"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             ),
@@ -198,24 +197,9 @@ class _ProfilePageState extends State<ProfilePage> {
             height: size.height * 0.055,
             width: size.width * 0.7,
             child: Container(
-              child: Text(getpassword = widgets[i]["password"],
+              child: Text(getpassword = widgets[0]["password"],
               ),
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-            ),
-          ),
-          SizedBox(height: 125),
-          Container(
-            alignment: Alignment(-0.9, -0.1),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomeKontributorPage(username: '',),),);
-              },
-              child: Text(
-                "Beralih\nSebagai Kontributor",
-                style: TextStyle(
-                    color: Colors.indigoAccent[700], fontWeight: FontWeight.bold),
-              ),
             ),
           ),
         ],

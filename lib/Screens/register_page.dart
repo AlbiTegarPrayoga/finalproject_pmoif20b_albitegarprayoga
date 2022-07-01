@@ -52,7 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 30),
               Container(
                 height: size.height * 0.02,
                 width: size.width * 0.7,
@@ -77,8 +77,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20),
@@ -106,8 +114,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20),
@@ -135,8 +151,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20),
@@ -164,6 +188,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         color: Colors.blueGrey[100],
                         fontStyle: FontStyle.italic),
                     suffixIcon: IconButton(
+                      iconSize: 22,
                       color: Colors.blueGrey[100],
                       splashRadius: 1,
                       icon: Icon(passwordVisible
@@ -175,13 +200,33 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey[50],
-                    borderRadius: BorderRadius.circular(7)
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 30),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 2.5,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
+                ),
                 height: size.height * 0.055,
                 width: size.width * 0.7,
                 child: ClipRRect(
@@ -200,9 +245,11 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               SizedBox(height: 15),
-              Text(
-                "Sudah punya akun?",
-                style: TextStyle(color: Colors.grey),
+              Text("Sudah punya akun?",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               GestureDetector(
                 onTap: () {
@@ -212,7 +259,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Text(
                   "Login",
                   style: TextStyle(
-                      color: Colors.indigoAccent[700], fontWeight: FontWeight.bold),
+                    color: Colors.indigoAccent[700],
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
               ),
             ],

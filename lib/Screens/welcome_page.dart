@@ -14,8 +14,8 @@ class WelcomePage extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 80),
             Image.asset(
-                "assets/images/logofarming.png",
-                height: size.height * 0.35,
+              "assets/images/logofarming.png",
+              height: size.height * 0.35,
             ),
             SizedBox(height: 40),
             Text(
